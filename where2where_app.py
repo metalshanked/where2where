@@ -73,13 +73,9 @@ def main():
             submit_button = st.button("Submit")
 
 
-
-
-
             if location_source and location_destination and submit_button:
                 miles = get_geo_distance(location_source, location_destination)
                 cost = calculate_travel_fee(miles, data_table)
-
                 st.success(f"The travel fee for {miles:.3f} miles is: ${cost}")
 
 
